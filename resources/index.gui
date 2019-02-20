@@ -1,0 +1,110 @@
+<svg id="gamePage">
+<!--  Initial page  -->
+  <svg id="homeScreen">
+    
+    <!--   Background Image for home page   -->
+    <image href="images/home.png" />
+    
+    <svg>
+      <use id="startGame" href="#push-button" y="5" height="60" fill="fb-green" font-family="System-Regular" font-size="40">
+        <set href="#text" attributeName="text-buffer" to="Play" />
+        <set href="#text" attributeName="fill" to="fb-white" />
+        <set href="#text" attributeName="y" to="12" />
+      </use>
+    </svg>
+  </svg>
+  
+  
+<!--  Get co-ordinates page  -->
+  <svg id="coordScreen" display="none">
+    <svg>
+      <defs>
+        <symbol id="custom-textarea" type="dynamic-textarea" system-events="all">
+          <textarea id="text" fill="white" x="0" y="0" width="100%" font-size="25" />
+          <rect x="0" y="$+15" width="100%" height="2" fill="fb-cyan" />
+        </symbol>
+      </defs>
+
+      <use id="custom" href="#custom-textarea" x="10" y="10" width="100%-20">
+        <set href="text" attributeName="text-buffer" to="Move to four designed point and pick to create parameters." />
+
+        <use id="saveCoords" y="100" href="#square-button" fill="fb-light-gray">
+          <set href="#text" attributeName="text-buffer" to="Pick first point" />
+        </use>
+<!--           <text id="point_count">{ ... }</text> -->
+
+      </use>
+    </svg>
+  </svg>
+  
+  
+<!--  Play game page  -->
+  <svg id="gameScreen" display="none">
+    <image href="images/grass.jpg" />
+    
+    
+    <svg id="gameMenuSvg">
+      <!-- TOP RIGHT MENU-->
+      <use id="gameMenu" href="#combo-button-upper-left" fill="fb-white">
+        <set href="combo-button-icon" attributeName="href" to="images/menu2.png"/>
+      </use>
+    </svg>
+    
+    <svg viewport-fill="lightblue">
+        <rect x="50" y="30" width="15" height="15" fill="blue" id="player" />
+    </svg>
+    
+<!--     <svg>
+        <circle id="fruit" cx="340" cy="242" r="5" fill="red" />
+    </svg> -->
+    
+    <svg>
+        <rect x="150" y="130" width="10" height="10" fill="red" id="fruit" />
+    </svg>
+    
+  </svg>
+  
+    <!--  Game menu     -->
+    
+     <svg id="gameMenuScreen" display="none">
+      <svg y="5" height="70">
+        <!-- toggle button OFF -->
+        <use id="btn_cancel" href="#square-button-toggle" fill="fb-green">
+          <set href="#text"  attributeName="text-buffer" to="Continue" />
+        </use>
+        <!-- toggle button ON -->
+        <use id="btn_retry" href="#square-button-toggle" x="50%" fill="fb-blue">
+          <set href="#text"  attributeName="text-buffer" to="Retry" />
+        </use>
+      </svg>
+      <svg y="$">
+        <!-- toggle button NO -->
+        <use id="btn_exit" href="#square-button-toggle-icon" fill="fb-red">
+          <set href="#text"  attributeName="text-buffer" to="Exit" />
+        </use>
+      </svg>
+    </svg>
+  
+  
+  
+      <!--  Exit Confirmation  -->
+  
+     <svg id="exit_page" display="none">
+       
+       <text y="110" x="50%" id="Title" font-family="System-Regular" fill="green" font-size="45" font-weight="bold" text-anchor="middle">Exit?</text> 
+       <svg y="$">
+         
+         <use id="btn_yes" href="#square-button-toggle" x="50%" fill="fb-green">
+            <set href="#text" attributeName="text-buffer" to="Yes" />
+         </use>
+         
+         <use id="btn_no" href="#square-button-toggle" value="1" fill="fb-red">
+            <set href="#text" attributeName="text-buffer" to="No" />
+         </use>
+         
+       </svg>
+       
+     </svg>
+  
+  
+</svg>

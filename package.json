@@ -1,0 +1,24 @@
+{
+  "fitbit": {
+    "appUUID": "63f5ee30-ae5f-4262-a5d0-11daedea50d6",
+    "appType": "app",
+    "appDisplayName": "snake-2000",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#f44336",
+    "requestedPermissions": [
+      "access_location",
+      "access_heart_rate"
+    ],
+    "buildTargets": [
+      "higgs"
+    ],
+    "i18n": {
+      "en": {
+        "name": "snake-2000"
+      }
+    }
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~3.0.0"
+  }
+}
