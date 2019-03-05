@@ -1,4 +1,4 @@
-
+/* Define the main state */
 
 export class Data {
   
